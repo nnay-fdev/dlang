@@ -1,19 +1,30 @@
+#include <cstring>
 #include <iostream>
 
 #include "string.hpp"
 #include "iostream.hpp"
-
+#include "dictionary.hpp"
 
 int main() {
     dlang::streams::ostream write;
-    const dlang::streams::istream read;
+    using string = dlang::dtypes::string;
 
-    dlang::dtypes::string text_;
+    dlang::dtypes::dictionary<int, string> dict;
+    int i = 0;
+    while (true) {
+        const dlang::streams::istream read;
 
-    read >> text_;
-    const char *text = text_.c_str();
+        string input;
 
-    write << text << '\n' << text_;
+        write << "enter smth :";
+        read >> input;
 
+        if (strcmp(input.c_str(), "end") == 0) break;
+
+        dict.add(i, input);
+
+        i++;
+    }
+    write << dict;
     return 0;
 }
