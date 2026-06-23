@@ -61,6 +61,20 @@ auto STRING::  end() const { return data.end(); }
 const char *STRING::c_str() const { return data.c_str(); }
 
 
+bool STRING::operator==  (const string &other) const { return data == other.data; }
+bool STRING::operator!=  (const string &other) const { return data != other.data; }
+
+char STRING::operator[]  (const int &index)    const { return data[index]; }
+
+STRING STRING::operator+ (const string &other) const { return string(data + other.data); }
+
+void STRING::operator+=  (const string &other)       { data = data + other.data; }
+
+int STRING::size() const { return data.size(); }
+int STRING::indexof(const char &find) const {
+    return data.find(find);
+}
+
 namespace dlang::dtypes {
     OSTREAM &operator<< (      OSTREAM &os, const string &text) { return os << text.c_str(); }
     void     operator>> (const ISTREAM &is,       string &text) {        is >> text.data;    }

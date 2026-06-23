@@ -27,6 +27,18 @@ namespace dlang::dtypes {
 
         const char *c_str() const;
 
+        bool operator==  (const string &other) const;
+        bool operator!=  (const string &other) const;
+
+        char operator[]  (const int &index)    const;
+
+        string operator+ (const string &other) const;
+
+        void operator+=  (const string &other);
+
+        int size   ()                 const;
+        int indexof(const char &find) const;
+
         friend streams::ostream &operator<< (      streams::ostream &os, const string &text);
         friend void              operator>> (const streams::istream &is,       string &text);
     };

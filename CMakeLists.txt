@@ -30,4 +30,4 @@ ADD_EXECUTABLE(bindlang main.cpp)
 TARGET_LINK_LIBRARIES(bindlang PRIVATE dlang)
 
 SET_TARGET_PROPERTIES(bindlang PROPERTIES
-                      LINK_FLAGS "-Wl,-rpath,'$ORIGIN/..libcx'")
+                      LINK_FLAGS "-Wl,-rpath,'$ORIGIN/../libcx'")
