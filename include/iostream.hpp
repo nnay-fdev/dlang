@@ -32,16 +32,15 @@ namespace dlang::streams {
         ~istream(); //dtor
 
         //supported types for dlang::streams::istream
-        //int     / single(float) / double
-        //char * / std::string    / char
+        //int             / single(float) / double
+        //std::string    / char
 
         //all operator>> methods will return void
-        void operator>> (int&         var) const; //int
-        void operator>> (char&        var) const; //char
-        void operator>> (float&       var) const; //float
-        void operator>> (double&      var) const; //double
+        void operator>> (int&               var) const; //int
+        void operator>> (char&              var) const; //char
+        void operator>> (float&             var) const; //float
+        void operator>> (double&            var) const; //double
 
-        void operator>> (char*        var) const; //char *
-        void operator>> (std::string& var) const; //std::string
+        void operator>> (std::string&       var) const; //std::string
     }; //istream
 } //namespace dlang::streams
