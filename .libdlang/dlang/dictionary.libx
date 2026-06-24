@@ -1,0 +1,12 @@
+#pragma once
+
+#include <dictionary.hpp>
+
+
+namespace dlang {
+    template <typename F, typename S>
+    using dictionary = dtypes::dictionary<F, S>;
+
+    template <typename F, typename S>
+    using pair = dtypes::pair<F, S>;
+} //namespace dlang

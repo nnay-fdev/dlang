@@ -1,0 +1,10 @@
+#pragma once
+
+#include <list.hpp>
+#include <list>
+
+
+namespace dlang {
+    template <typename T>
+    using list = dtypes::list<T>;
+} //namespace dlang

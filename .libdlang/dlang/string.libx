@@ -1,0 +1,8 @@
+#pragma once
+
+#include <string.hpp>
+
+
+namespace dlang {
+    using string = dtypes::string;
+} //namespace dlang

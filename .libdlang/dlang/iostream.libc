@@ -1,0 +1,11 @@
+#pragma once
+
+#include <iostream.hpp>
+#include <string.hpp>
+
+namespace dlang {
+    inline streams::ostream write;
+    inline streams::istream read;
+
+    inline dtypes::string endline = '\n';
+} //namespace dlang

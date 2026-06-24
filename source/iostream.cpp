@@ -34,7 +34,7 @@ OSTREAM &OSTREAM::operator<< (const std::string &text) { std::printf("%s",  text
 
 //now define istream
 void ISTREAM::operator>> (int &var)         const { std::scanf("%d",  &var);             } //int
-void ISTREAM::operator>> (char &var)        const { std::scanf("%c",  &var);             } //char
+void ISTREAM::operator>> (char &var)        const { std::scanf(" %c",  &var);             } //char
 void ISTREAM::operator>> (float &var)       const { std::scanf("%f",  &var);             } //single
 void ISTREAM::operator>> (double &var)      const { std::scanf("%lf", &var);             } //double
 
