@@ -5,7 +5,7 @@
 
 #include <vector>
 
-#include "iostream.hpp"
+#include "ostream.hpp"
 
 
 namespace dlang::dtypes {

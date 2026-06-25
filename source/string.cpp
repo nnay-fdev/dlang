@@ -1,8 +1,9 @@
 #include "string.hpp"
+#include "list.hpp"
+#include "istream.hpp"
+#include "ostream.hpp"
 
 #include <algorithm>
-
-#include "list.hpp"
 
 
 //defining helpful macro
@@ -77,5 +78,5 @@ int STRING::indexof(const char &find) const {
 
 namespace dlang::dtypes {
     OSTREAM &operator<< (      OSTREAM &os, const string &text) { return os << text.c_str(); }
-    void     operator>> (const ISTREAM &is,       string &text) {        is >> text.data;    }
+    void     operator>> (const ISTREAM &is,       string &text) {        is >> text.data   ; }
 } //namespace dlang::dtypes

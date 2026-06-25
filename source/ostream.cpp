@@ -1,4 +1,4 @@
-#include "iostream.hpp"
+#include "ostream.hpp"
 #include <cstdio>
 #include <cstring>
 #include <iostream>
@@ -15,11 +15,6 @@
 OSTREAM::ostream()  = settle; //ostream ctor
 OSTREAM::~ostream() = settle; //ostream dtor
 
-//istream startup
-ISTREAM::istream()  = settle; //istream ctor
-ISTREAM::~istream() = settle; //istream dtor
-
-
 
 //let's define ostream first
 OSTREAM &OSTREAM::operator<< (const int &text)         { std::printf("%d",  text);                    return *this; } //int -> %d
@@ -32,11 +27,4 @@ OSTREAM &OSTREAM::operator<< (const std::string &text) { std::printf("%s",  text
 
 
 
-//now define istream
-void ISTREAM::operator>> (int &var)         const { std::scanf("%d",  &var);             } //int
-void ISTREAM::operator>> (char &var)        const { std::scanf(" %c",  &var);             } //char
-void ISTREAM::operator>> (float &var)       const { std::scanf("%f",  &var);             } //single
-void ISTREAM::operator>> (double &var)      const { std::scanf("%lf", &var);             } //double
-
-void ISTREAM::operator>> (std::string &var) const { std::getline(std::cin, var);         } //std::string
 

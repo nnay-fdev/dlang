@@ -2,7 +2,8 @@
 
 #include <string>
 #include "list.hpp"
-#include "iostream.hpp"
+#include "ostream.hpp"
+#include "istream.hpp"
 
 
 namespace dlang::dtypes {
